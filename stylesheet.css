@@ -1301,10 +1301,275 @@ audio {
     }
 
 
+// ...existing code...
 
-    /*controlling tablet width*/
-    /*@media only screen and (max-width: 720px){
-    	.container {
-    		-webkit-transform: scale(0.9);
-    	}
+/* Responsive untuk Mobile */
+@media (max-width: 768px) {
+    .balloons {
+        position: fixed !important;
+        width: 50px !important;
+        height: 73px !important;
+        background-size: 50px 73px !important;
+        z-index: 1000 !important;
+        opacity: 0.8 !important;
+        bottom: auto !important;
+    }
+    
+    .balloons h2 {
+        font-size: 18px !important;
+        margin: 10px 0 !important;
+        line-height: 1.2 !important;
+        text-shadow: 2px 2px 2px #000 !important;
+        display: block !important;
+    }
+    
+    /* Posisi balon untuk mobile - tersebar merata */
+    #b1 { 
+        left: 2% !important; 
+        top: 15% !important; 
+        animation-delay: 0s !important;
+    }
+    #b2 { 
+        left: 16% !important; 
+        top: 8% !important; 
+        animation-delay: 0.5s !important;
+    }
+    #b3 { 
+        left: 30% !important; 
+        top: 20% !important; 
+        animation-delay: 1s !important;
+    }
+    #b4 { 
+        left: 44% !important; 
+        top: 12% !important; 
+        animation-delay: 1.5s !important;
+    }
+    #b5 { 
+        left: 58% !important; 
+        top: 18% !important; 
+        animation-delay: 2s !important;
+    }
+    #b6 { 
+        left: 72% !important; 
+        top: 10% !important; 
+        animation-delay: 2.5s !important;
+    }
+    #b7 { 
+        left: 86% !important; 
+        top: 22% !important; 
+        animation-delay: 3s !important;
+    }
+    
+    /* Border balon disembunyikan pada mobile */
+    .balloon-border {
+        display: none !important;
+    }
+    
+    /* Container untuk mobile */
+    .container {
+        padding-top: 80px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Message untuk mobile */
+    .message {
+        margin-top: 120px !important;
+        padding: 0 15px !important;
+    }
+    
+    .message p {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        text-shadow: 1px 1px 1px #FFF !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Navbar untuk mobile */
+    .navbar-fixed-bottom {
+        position: relative !important;
+        margin-top: 30px !important;
+        padding: 10px !important;
+    }
+    
+    .navbar-fixed-bottom .btn {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        margin: 3px !important;
+        display: inline-block !important;
+        width: auto !important;
+    }
+    
+    /* Banner untuk mobile */
+    .bannar {
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Cake untuk mobile */
+    .cake-cover {
+        margin-top: 30px !important;
+        text-align: center !important;
+    }
+    
+    /* Audio controls untuk mobile */
+    audio {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 10px auto !important;
+        display: block !important;
+    }
+    
+    /* Bulb untuk mobile */
+    .bulb {
+        width: 30px !important;
+        height: 30px !important;
+        background-size: 30px 30px !important;
+    }
+    
+    .bulb-holder {
+        height: 50px !important;
+    }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 480px) {
+    .balloons {
+        width: 40px !important;
+        height: 58px !important;
+        background-size: 40px 58px !important;
+    }
+    
+    .balloons h2 {
+        font-size: 14px !important;
+        margin: 8px 0 !important;
+    }
+    
+    /* Posisi balon untuk layar sangat kecil */
+    #b1 { left: 1% !important; top: 12% !important; }
+    #b2 { left: 15% !important; top: 6% !important; }
+    #b3 { left: 29% !important; top: 18% !important; }
+    #b4 { left: 43% !important; top: 10% !important; }
+    #b5 { left: 57% !important; top: 16% !important; }
+    #b6 { left: 71% !important; top: 8% !important; }
+    #b7 { left: 85% !important; top: 20% !important; }
+    
+    .container {
+        padding-top: 60px !important;
+    }
+    
+    .message {
+        margin-top: 80px !important;
+        padding: 0 10px !important;
+    }
+    
+    .message p {
+        font-size: 16px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .navbar-fixed-bottom .btn {
+        font-size: 10px !important;
+        padding: 6px 10px !important;
+        margin: 2px !important;
+    }
+    
+    .bulb {
+        width: 25px !important;
+        height: 25px !important;
+        background-size: 25px 25px !important;
+    }
+    
+    .bulb-holder {
+        height: 40px !important;
+    }
+}
+
+/* Landscape orientation untuk mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .balloons {
+        width: 35px !important;
+        height: 51px !important;
+        background-size: 35px 51px !important;
+    }
+    
+    .balloons h2 {
+        font-size: 12px !important;
+        margin: 6px 0 !important;
+    }
+    
+    /* Posisi balon untuk landscape */
+    #b1 { left: 5% !important; top: 25% !important; }
+    #b2 { left: 18% !important; top: 15% !important; }
+    #b3 { left: 31% !important; top: 30% !important; }
+    #b4 { left: 44% !important; top: 20% !important; }
+    #b5 { left: 57% !important; top: 28% !important; }
+    #b6 { left: 70% !important; top: 18% !important; }
+    #b7 { left: 83% !important; top: 32% !important; }
+    
+    .container {
+        padding-top: 40px !important;
+    }
+    
+    .message {
+        margin-top: 60px !important;
+    }
+    
+    .message p {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+/* Animasi khusus untuk mobile */
+@media (max-width: 768px) {
+    .balloons-rotate-behaviour-one {
+        animation: mobile_balloons_rotate_one linear 8s infinite !important;
+    }
+    
+    .balloons-rotate-behaviour-two {
+        animation: mobile_balloons_rotate_two linear 8s infinite !important;
+    }
+    
+    @keyframes mobile_balloons_rotate_one {
+        0% { transform: rotate(15deg); }
+        50% { transform: rotate(-15deg); }
+        100% { transform: rotate(15deg); }
+    }
+    
+    @keyframes mobile_balloons_rotate_two {
+        0% { transform: rotate(-10deg); }
+        50% { transform: rotate(10deg); }
+        100% { transform: rotate(-10deg); }
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .balloons {
+        width: 70px !important;
+        height: 128px !important;
+        background-size: 70px 128px !important;
+    }
+    
+    .balloons h2 {
+        font-size: 35px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .message p {
+        font-size: 24px !important;
+    }
+    
+    .navbar-fixed-bottom .btn {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+    }
+}
+
+/*controlling tablet width*/
+@media only screen and (max-width: 720px){
+	.container {
+		-webkit-transform: scale(0.9);
+	}
     }*/
