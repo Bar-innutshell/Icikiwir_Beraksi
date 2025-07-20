@@ -140,30 +140,68 @@ $('document').ready(function(){
 
 		
 	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
+    vw = $(window).width()/2;
 
-		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-		$('#b1').attr('id','b11');
-		$('#b2').attr('id','b22')
-		$('#b3').attr('id','b33')
-		$('#b4').attr('id','b44')
-		$('#b5').attr('id','b55')
-		$('#b6').attr('id','b66')
-		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
-		$('#b22').animate({top:240, left: vw-250},500);
-		$('#b33').animate({top:240, left: vw-150},500);
-		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+50},500);
-		$('#b66').animate({top:240, left: vw+150},500);
-		$('#b77').animate({top:240, left: vw+250},500);
-		$('.balloons').css('opacity','0.9');
-		$('.balloons h2').fadeIn(3000);
-		$(this).fadeOut('slow').delay(3000).promise().done(function(){
-			$('#story').fadeIn('slow');
-		});
-	});
-	
+    $('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
+    $('#b1').attr('id','b11');
+    $('#b2').attr('id','b22')
+    $('#b3').attr('id','b33')
+    $('#b4').attr('id','b44')
+    $('#b5').attr('id','b55')
+    $('#b6').attr('id','b66')
+    $('#b7').attr('id','b77')
+    
+    // Cek apakah mobile
+    if($(window).width() <= 768) {
+        // Posisi untuk mobile
+        $('#b11').animate({top:'15%', left: '2%'},500);
+        $('#b22').animate({top:'8%', left: '16%'},500);
+        $('#b33').animate({top:'20%', left: '30%'},500);
+        $('#b44').animate({top:'12%', left: '44%'},500);
+        $('#b55').animate({top:'18%', left: '58%'},500);
+        $('#b66').animate({top:'10%', left: '72%'},500);
+        $('#b77').animate({top:'22%', left: '86%'},500);
+    } else {
+        // Posisi untuk desktop
+        $('#b11').animate({top:240, left: vw-350},500);
+        $('#b22').animate({top:240, left: vw-250},500);
+        $('#b33').animate({top:240, left: vw-150},500);
+        $('#b44').animate({top:240, left: vw-50},500);
+        $('#b55').animate({top:240, left: vw+50},500);
+        $('#b66').animate({top:240, left: vw+150},500);
+        $('#b77').animate({top:240, left: vw+250},500);
+    }
+    
+    $('.balloons').css('opacity','0.9');
+    $('.balloons h2').fadeIn(3000);
+    $(this).fadeOut('slow').delay(3000).promise().done(function(){
+        $('#story').fadeIn('slow');
+    });
+});
+
+$(window).resize(function(){
+    if($(window).width() <= 768) {
+        // Reset posisi balon untuk mobile saat resize
+        $('#b11').css({top:'15%', left: '2%'});
+        $('#b22').css({top:'8%', left: '16%'});
+        $('#b33').css({top:'20%', left: '30%'});
+        $('#b44').css({top:'12%', left: '44%'});
+        $('#b55').css({top:'18%', left: '58%'});
+        $('#b66').css({top:'10%', left: '72%'});
+        $('#b77').css({top:'22%', left: '86%'});
+    } else {
+        // Reset untuk desktop
+        vw = $(window).width()/2;
+        $('#b11').css({top:240, left: vw-350});
+        $('#b22').css({top:240, left: vw-250});
+        $('#b33').css({top:240, left: vw-150});
+        $('#b44').css({top:240, left: vw-50});
+        $('#b55').css({top:240, left: vw+50});
+        $('#b66').css({top:240, left: vw+150});
+        $('#b77').css({top:240, left: vw+250});
+    }
+});
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){

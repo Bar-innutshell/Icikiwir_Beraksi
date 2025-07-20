@@ -1301,8 +1301,6 @@ audio {
     }
 
 
-// ...existing code...
-
 /* Responsive untuk Mobile */
 @media (max-width: 768px) {
     .balloons {
@@ -1312,7 +1310,7 @@ audio {
         background-size: 50px 73px !important;
         z-index: 1000 !important;
         opacity: 0.8 !important;
-        bottom: auto !important;
+        /* HAPUS bottom: -200px !important; */
     }
     
     .balloons h2 {
@@ -1320,41 +1318,41 @@ audio {
         margin: 10px 0 !important;
         line-height: 1.2 !important;
         text-shadow: 2px 2px 2px #000 !important;
-        display: block !important;
+        /* HAPUS display: none !important; */
     }
     
-    /* Posisi balon untuk mobile - tersebar merata */
-    #b1 { 
+    /* Posisi balon untuk mobile - hanya setelah ID berubah ke b11, b22, etc */
+    #b11 { 
         left: 2% !important; 
         top: 15% !important; 
         animation-delay: 0s !important;
     }
-    #b2 { 
+    #b22 { 
         left: 16% !important; 
         top: 8% !important; 
         animation-delay: 0.5s !important;
     }
-    #b3 { 
+    #b33 { 
         left: 30% !important; 
         top: 20% !important; 
         animation-delay: 1s !important;
     }
-    #b4 { 
+    #b44 { 
         left: 44% !important; 
         top: 12% !important; 
         animation-delay: 1.5s !important;
     }
-    #b5 { 
+    #b55 { 
         left: 58% !important; 
         top: 18% !important; 
         animation-delay: 2s !important;
     }
-    #b6 { 
+    #b66 { 
         left: 72% !important; 
         top: 10% !important; 
         animation-delay: 2.5s !important;
     }
-    #b7 { 
+    #b77 { 
         left: 86% !important; 
         top: 22% !important; 
         animation-delay: 3s !important;
@@ -1385,21 +1383,6 @@ audio {
         margin-bottom: 15px !important;
     }
     
-    /* Navbar untuk mobile */
-    .navbar-fixed-bottom {
-        position: relative !important;
-        margin-top: 30px !important;
-        padding: 10px !important;
-    }
-    
-    .navbar-fixed-bottom .btn {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        margin: 3px !important;
-        display: inline-block !important;
-        width: auto !important;
-    }
-    
     /* Banner untuk mobile */
     .bannar {
         max-width: 90% !important;
@@ -1410,14 +1393,6 @@ audio {
     .cake-cover {
         margin-top: 30px !important;
         text-align: center !important;
-    }
-    
-    /* Audio controls untuk mobile */
-    audio {
-        width: 100% !important;
-        max-width: 300px !important;
-        margin: 10px auto !important;
-        display: block !important;
     }
     
     /* Bulb untuk mobile */
@@ -1438,21 +1413,23 @@ audio {
         width: 40px !important;
         height: 58px !important;
         background-size: 40px 58px !important;
+        /* HAPUS bottom: -200px !important; */
     }
     
     .balloons h2 {
         font-size: 14px !important;
         margin: 8px 0 !important;
+        /* HAPUS display: none !important; */
     }
     
-    /* Posisi balon untuk layar sangat kecil */
-    #b1 { left: 1% !important; top: 12% !important; }
-    #b2 { left: 15% !important; top: 6% !important; }
-    #b3 { left: 29% !important; top: 18% !important; }
-    #b4 { left: 43% !important; top: 10% !important; }
-    #b5 { left: 57% !important; top: 16% !important; }
-    #b6 { left: 71% !important; top: 8% !important; }
-    #b7 { left: 85% !important; top: 20% !important; }
+    /* Posisi balon untuk layar sangat kecil - hanya untuk b11, b22, etc */
+    #b11 { left: 1% !important; top: 12% !important; }
+    #b22 { left: 15% !important; top: 6% !important; }
+    #b33 { left: 29% !important; top: 18% !important; }
+    #b44 { left: 43% !important; top: 10% !important; }
+    #b55 { left: 57% !important; top: 16% !important; }
+    #b66 { left: 71% !important; top: 8% !important; }
+    #b77 { left: 85% !important; top: 20% !important; }
     
     .container {
         padding-top: 60px !important;
@@ -1466,12 +1443,6 @@ audio {
     .message p {
         font-size: 16px !important;
         margin-bottom: 12px !important;
-    }
-    
-    .navbar-fixed-bottom .btn {
-        font-size: 10px !important;
-        padding: 6px 10px !important;
-        margin: 2px !important;
     }
     
     .bulb {
@@ -1491,21 +1462,23 @@ audio {
         width: 35px !important;
         height: 51px !important;
         background-size: 35px 51px !important;
+        /* HAPUS bottom: -200px !important; */
     }
     
     .balloons h2 {
         font-size: 12px !important;
         margin: 6px 0 !important;
+        /* HAPUS display: none !important; */
     }
     
-    /* Posisi balon untuk landscape */
-    #b1 { left: 5% !important; top: 25% !important; }
-    #b2 { left: 18% !important; top: 15% !important; }
-    #b3 { left: 31% !important; top: 30% !important; }
-    #b4 { left: 44% !important; top: 20% !important; }
-    #b5 { left: 57% !important; top: 28% !important; }
-    #b6 { left: 70% !important; top: 18% !important; }
-    #b7 { left: 83% !important; top: 32% !important; }
+    /* Posisi balon untuk landscape - hanya untuk b11, b22, etc */
+    #b11 { left: 5% !important; top: 25% !important; }
+    #b22 { left: 18% !important; top: 15% !important; }
+    #b33 { left: 31% !important; top: 30% !important; }
+    #b44 { left: 44% !important; top: 20% !important; }
+    #b55 { left: 57% !important; top: 28% !important; }
+    #b66 { left: 70% !important; top: 18% !important; }
+    #b77 { left: 83% !important; top: 32% !important; }
     
     .container {
         padding-top: 40px !important;
@@ -1560,16 +1533,40 @@ audio {
     .message p {
         font-size: 24px !important;
     }
-    
-    .navbar-fixed-bottom .btn {
-        font-size: 14px !important;
-        padding: 10px 16px !important;
-    }
 }
 
 /*controlling tablet width*/
-@media only screen and (max-width: 720px){
-	.container {
-		-webkit-transform: scale(0.9);
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+	.balloons {
+		width: 60px !important;
+		height: 109px !important;
+		background-size: 60px 109px !important;
 	}
-    }*/
+	
+	.balloons h2 {
+		font-size: 30px !important;
+		margin: 12px 0 !important;
+	}
+	
+	.message p {
+		font-size: 20px !important;
+	}
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) {
+    .balloons {
+        width: 80px !important;
+        height: 146px !important;
+        background-size: 80px 146px !important;
+    }
+    
+    .balloons h2 {
+        font-size: 40px !important;
+        margin: 18px 0 !important;
+    }
+    
+    .message p {
+        font-size: 22px !important;
+    }
+}
